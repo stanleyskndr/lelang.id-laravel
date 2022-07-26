@@ -1,0 +1,1261 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+a, p, h1, h2, h3, h4, h5, label{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+input{
+    outline-color: #FFF27C;
+}
+
+/* Navigation bar - Template */
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+    background-color: #FFFFFF;
+    padding: 0px 10%;
+    align-items: center;
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.041);
+}
+
+.navbar-logo{
+    max-height: 38px;
+    /* background-color: red; */
+}
+
+.navbar-logo img{
+    width: 110px;
+}
+
+.search-bar{  
+    height: fit-content;
+    width: 30%;
+    background-color: #F7F8F3;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.search-bar form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 15px;
+}
+
+.search-bar form input{
+    background-color: #F7F8F3;   
+    height: 15px;
+    width: 90%;
+    border: none;
+    padding: auto 5px; 
+    outline: none;
+    margin: 0;
+}
+
+.search-bar form input::placeholder{
+    font-family: 'Poppins', sans-serif;
+    color: #9c9c9c;
+    font-weight: 400;
+    padding: 0;
+}
+
+.search-bar form button{
+    border: none;
+    display: flex;
+    align-items: center;
+    background-color: #F7F8F3;
+    height: fit-content;
+    width: fit-content;
+    outline: none;
+    cursor: pointer;
+}
+
+.search-bar form img{
+    width: 18px;
+}
+
+.nav-menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    justify-content: flex-end;
+}
+
+.nav-menu li{
+    list-style: none;
+    margin-left: 25px;
+    height: fit-content;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: #323232;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+.nav-item a:hover{
+    border-bottom: 3px solid #FFF27C;
+}
+
+.nav-item img{
+    width: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item button{
+    background-color: #FFF27C;
+    border: none;
+    color: #323232;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 15px #32323210;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav-item button:hover{
+    background-color: #FFEF5A;
+}
+
+.current-page{
+    border-bottom: 3px solid #FFF27C;
+}
+
+.dropdown-menu a{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    align-items: center;
+}
+
+.dropdown-icon img{
+    width: 15px;
+    margin-left: 5px;
+}
+
+.dropdown-item{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #FFFFFF;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    transform: translateY(-10px);
+}
+
+.dropdown-item a{
+    margin: 3px 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-username{
+    margin: auto 5px;
+}
+
+.nav-profile-pic img{
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu a:hover, .dropdown-item a p:target + .dropdown-item a p{
+    border-bottom: 3px solid #FFF27C;
+}
+
+.dropdown-menu a:focus + .dropdown-item{
+    pointer-events: all;
+    visibility: visible;
+    transform: translateY(10px);
+    border: solid 1px #FFF27C;
+    border-radius: 7px;
+}
+
+
+/* All Shoes */
+.content-con{
+    padding: 3% 10%;
+}
+
+.slider-con, .carousel-item{
+    width: 100%;
+    height: 285px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.carousel-item img{
+    width: 100%;
+    height: auto;
+}
+
+.section-con{
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+}
+
+.section-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.section-header h3{
+    font-weight: 600;
+}
+
+.see-all-con{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.see-all-con p{
+    color: #FFEF5A;
+    margin-right: 5px;
+    font-weight: 500;
+}
+
+.see-all-con img{
+    max-width: 12px;
+    max-height: 10px;
+}
+
+.see-all-con img{
+    width: 15px;
+    transform: rotate(270deg);
+}
+
+.cats-con{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cat-con{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 15%;
+    min-height: 70px;
+    max-height: 70px;
+    background-image: url("/storage/res/catdecor.png");
+    background-repeat: no-repeat;
+    background-position-x: -30%;
+    background-position-y: -15px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.068);
+    cursor: pointer;
+    /* padding: 0 10px; */
+}
+
+.cat-con img{
+    width: 40px;
+    height: auto;
+}
+
+.cat-con p{
+    font-weight: 500;
+    margin-top: 10px;
+    max-width: 50%;
+    text-align: center;
+}
+
+.auctions-con{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+
+.auctions-con a{
+    min-width: 23%;
+    max-width: 23%;
+    border-radius: 10px;
+    box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.068);
+    margin: 0 1%;
+    margin-bottom: 25px;
+}
+
+.product-card{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.auctions-con a:hover{
+    transform: translateY(-5px);
+}
+
+.product-image{
+    width: 100%;
+    height: 185px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 1px 0px 15px rgba(0, 0, 0, 0.082);
+}
+
+.product-image img{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.product-countdown{
+    background-color: #fae630;
+    color: #FFFFFF;
+    width: 70%;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: -20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+}
+
+.product-countdown img{
+    width: 20px;
+    margin: 0;
+}
+.product-countdown p{
+    color: #FFFFFF;
+    font-size: 1.1em;
+}
+
+.product-body{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    color: #1D1D1D;
+}
+
+.product-detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.product-body{
+    margin: 20px;
+}
+
+.product-body p{
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.product-bid{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.product-bid h6{
+    color: #757575;
+    margin: 0;
+}
+
+.color-red{
+    color: crimson;
+}
+
+.product-detail h5{
+    border: 1.5px solid #1ED700;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    color: #1ED700;
+    padding: 3px 6px;
+    height: fit-content;
+    font-weight: 600;
+    margin: auto 0;
+}
+
+.bid-again h5{
+    border: none;
+    border-radius: 3px;
+    background-color: #24c40c;
+    color: #FFFFFF;
+    padding: 6px 10px;
+    height: fit-content;
+    font-weight: 600;
+    margin: auto 0;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.close-bid form button{
+    border: none;
+    border-radius: 3px;
+    background-color: #db1b11;
+    color: #FFFFFF;
+    padding: 6px 10px;
+    height: fit-content;
+    font-weight: 600;
+    margin: auto 0;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.close-bid form button:hover{
+    background-color: #f0281d;
+}
+
+.paginate-links{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.paginate-links ul{
+    display: flex;
+    width: 25%;
+    align-items: center;
+    flex-direction: row;    
+}
+
+.paginate-links ul li{
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+    margin: 0 10px;
+}
+
+.paginate-links ul li a{
+    text-decoration: none;
+}
+
+.paginate-links .page-link{
+    color: #EFD700;
+}
+
+.paginate-links .active .page-link, .paginate-links .disabled .page-link{
+    color: #212121;
+} 
+
+/* Login & Register*/
+.login-register-bg{
+    background-image: url("/storage/res/loginbg.png");
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.login-register-con{
+    width: 800px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    box-shadow: 0px 0px 70px rgba(51, 51, 51, 0.37);
+}
+
+.login-register-left{
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    align-items: center;
+    padding: auto;
+}
+
+.login-register-left-title h1{
+    color: #FFEF5A;
+    margin: 0 auto;
+    width: fit-content;
+    /* font-size: 3em; */
+}
+
+.login-register-left-title p{
+    color: #FFF27C;
+    font-size: 0.85em;
+    margin-top: -10px;
+}
+
+.login-register-illustration{
+    width: 250px;
+    height: 320px;
+}
+
+.login-register-illustration img{
+    width: 100%;
+    height: 100%;
+    margin-bottom: -330px;
+}
+
+.login-register-right{
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* justify-content: center; */
+    width: 50%;
+    height: 100%;
+}
+
+.login-register-logo{
+    width: 160px;
+    height: 55px;
+    margin-top: 35px;
+}
+
+.login-register-logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.login-logo{
+    margin-bottom: 15px;
+}
+
+.login-register-right-title{
+    color: #1D1D1D;
+    margin-top: 20px;
+}
+
+.register-title h2{
+    font-size: 1.3em;
+}
+
+.register-title h1{
+    font-size: 2.8em;
+}
+
+.create-auction-header{
+    color: #323232;
+}
+
+.login-register-right-title hr, .create-auction-header hr{
+    width: 60%;
+    height: 4px;
+    background-color: #FFEF5A;
+    border: none;
+    margin: 0 auto;
+    
+}
+
+.login-register-form{
+    margin-bottom: 20px;
+}
+
+.login-register-form form{
+    text-align: center;
+}
+
+.form-input{
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input input{
+    border: none;
+    background-color: #F2F2F2;
+    padding-left: 15px;
+    /* margin-top: 15px; */
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.form-input input::placeholder{
+    color: #757575;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-register-form form button{
+    border: none;
+    background-color: #FFF27C;
+    color: #1D1D1D;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.144);
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.login-register-form form button:hover{
+    background-color: #FFEF5A;
+}
+
+.login-register-msg{
+    display: flex;
+    flex-direction: row;
+    font-size: 0.9em;
+}
+
+.yellow-text{
+    color: #EFD700;
+    margin-left: 5px;
+}
+
+.remember-me{
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    color: #323232;
+}
+
+.invalid-feedback{
+    color: crimson;
+    font-family: 'Poppins', sans-serif;
+}
+
+.auction-ended{
+    background-color: #ef3000;
+    color: #FFFFFF;
+    width: 40%;
+    font-weight: 500;
+}
+
+/* Shoes Detail */
+.productpage-con{
+    display: flex;
+    flex-direction: column;
+    min-height: 85vh;
+}
+
+.productpage-con h5{
+    color: #757575;
+}
+
+.productpage-upper{
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+}
+
+.productpage-upper hr{
+    width: 100%;
+    border: none;
+    height: 1px;
+    background-color: #c7c7c7;
+    margin: 30px auto;
+}
+
+.productpage-image{
+    width: 45%;
+    height: auto;
+    max-height: 65vh;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.productpage-image img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.productpage-body{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 3%;
+}
+
+.productpage-header{
+    color: #323232;
+    min-height: 40px;
+}
+
+.productpage-header h5{
+    border: 1.5px solid #1ED700;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    color: #1ED700;
+    padding: 2px 5px;
+    height: fit-content;
+    font-weight: 500;
+    margin: auto 0;
+    width: fit-content;
+    margin-top: 10px;
+}
+
+.productpage-bid{
+    display: flex;
+    flex-direction: row;
+}
+
+.productpage-bid-detail{
+    min-width: 50%;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.productpage-bid-detail p, #countdown{
+    color: #323232;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.productpage-bid-detail h6{
+    color: #EFD700;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.productpage-bid-input{
+    display: flex;
+    flex-direction: column; 
+}
+
+.productpage-bid-input .form-input{
+    display: flex;
+    flex-direction: row;
+    border: 0.5px solid #EFD700;
+    width: 70%;
+    border-radius: 5px;
+    background-color: #F1F1F1;
+    margin: 5px 0;
+}
+
+.productpage-bid-input p{
+    background-color: inherit;
+    background-color: #F1F1F1;
+    margin: auto auto;
+    margin-left: 10px;
+}
+
+.productpage-bid-input input{
+    width: 60%;
+    outline: none;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+}
+
+.productpage-bid-input .form-input button{
+    width: 40%;
+    background-color: #EFD700;
+    color: #FFFFFF;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.productpage-bottom{
+    margin-top: 30px;
+}
+
+/* Create Auction */
+.create-auction-con{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.create-auction-header{
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.create-auction-body{
+    margin-top: 20px;
+}
+
+.create-auction-body .form-input input{
+    width: 35vw;
+}
+
+.form-input-image{
+    display: flex;
+    flex-direction: column;
+}
+
+.create-auction-button{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.create-auction-body form button{
+    border: none;
+    background-color: #FFF27C;
+    color: #323232;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    margin: 40px auto;
+}
+
+.create-auction-body form button:hover{
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.144);
+}
+
+
+
+/* .shoes-detail{
+    display: flex;
+    flex-direction: row;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border: 1px solid #f0f0f0;
+    padding: 6% 5%;
+}
+
+.shoes-detail-img{
+    min-width: 50%;
+    max-width: 50%;
+}
+
+.shoes-detail img{
+    width: 100%;
+}
+
+.shoes-detail-body{
+    padding-left: 10%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+
+.shoes-detail-body h2{
+    height: fit-content;
+    margin-bottom: 15px;
+}
+
+.shoes-detail-body h4{
+    font-weight: 600;
+}
+
+.qty-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+    width: 55%;
+    border: 2px solid #F7444E;
+    border-radius: 15px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.shoes-detail-body form input{
+    width: 47%;
+    height: 20px;
+    border: none;
+    margin: 0 auto;
+    outline: none;
+}
+
+.shoes-detail-body form input::placeholder{
+    font-family: 'Poppins', sans-serif;
+}
+
+.shoes-detail-body button{
+    height: 35px;
+    border: none;
+    background-color: #F7444E;
+    border-radius: 10px;
+    padding: 0 10px;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    outline: none;
+}
+
+.invalid-feedback{
+    color: crimson;
+} */
+
+/* Cart */
+
+/* .cart-group a{
+    text-decoration: none;
+}
+
+.cart-group .shoes-detail{
+    padding: 0 15%;
+    margin-bottom: 20px;
+    padding: 3% 5%;
+    box-shadow: 2px 2px 20px #2121211f;
+}
+
+
+.cart-group .shoes-detail-img{
+    margin: auto 6%;
+    text-align: center;
+    min-width: 40%;
+    max-width: 40%;
+}
+
+.cart-group .shoes-detail-img img{
+    width: 60%;
+}
+
+.cart-group .shoes-detail-body{
+   padding-left: 0;
+}
+
+.cart-group .shoes-detail-body p{
+    margin-bottom: 0;
+}
+
+.cart-detail-cta{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.cart-detail-cta form{
+    max-width: 50%;
+}
+
+.cart-detail-cta .qty-input{
+    width: fit-content;
+}
+
+.cart-detail-cta form input{
+    margin: 0 5px;
+    width: 60%;
+}
+
+.delete-cart{
+    width: fit-content;
+    border-radius: 15px;
+    margin: 0 20px;
+    border: 2px solid #CD0F19;
+    background-color: #CD0F19;
+}
+
+.delete-cart button:hover{
+    background-color: #dd343d;
+}
+
+.delete-cart button{
+    display: flex;
+    align-items: center;
+    margin: 0 0px;
+    width: fit-content;
+    background-color: #CD0F19;
+    border: none;
+    outline: none;
+}
+
+.delete-cart img{
+    width: 25px;
+}
+
+.checkout-btn{
+    width: fit-content;
+    margin: 10px auto;
+}
+
+.checkout-btn button{
+    background-color: #F7444E;
+    border: 3px solid #F7444E;
+    border-radius: 15px;
+    padding: 7px 25px;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 1.2em;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    outline: none;
+}
+
+.checkout-btn button:hover{
+    background-color: #FFFFFF;
+    color: #F7444E;
+    font-weight: 700;
+}
+
+.empty-alert{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    padding: 5% 0;
+    color: #212121;
+}
+
+.empty-alert img{
+    width: 250px;
+    margin: 4% auto;
+
+}
+
+.empty-alert h2{
+
+    width: fit-content;
+    margin: 5% auto;
+} */
+
+/* Transactions */
+/* .transaction-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.transaction-group a{
+    text-decoration: none;
+}
+
+.transaction-con{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border: 1px solid #f0f0f0;
+    padding: 3% 6%;
+    margin-bottom: 3%;
+    box-shadow: 2px 2px 20px #2121211f;
+}
+
+.transaction-detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #212121;
+    text-decoration: none;
+    padding: 0 10%;
+    margin-bottom: 3%;
+}
+
+.transaction-detail h4, .transaction-detail p{
+    margin: 0;
+    text-decoration: none;
+}
+
+.transaction-img{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 1% 8%;
+}
+
+.transaction-img img{
+    width: 26%;
+}
+
+.trans-detail-body{
+    font-family: 'Poppins', sans-serif; 
+}
+
+.trans-detail-body h3{
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.admin-trans-con{
+    display: flex;
+    flex-direction: row;
+    padding: 5% 5%;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 2px 2px 20px #2121211f;
+    margin: 3% 0;
+}
+
+.admin-trans-img{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-height: 130px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.admin-trans-img img{
+    width: 45%;
+}
+
+.admin-trans-body{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    color: #212121;
+}
+
+.admin-trans-body h4{
+    margin: 15px 0;
+} */
+
+/* View Users */
+/* .user-list{
+    display: flex;
+    flex-direction: column;
+    padding: 3% 10%;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 2px 2px 20px #2121211f;
+}
+
+.user-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0;
+    align-items: center;
+}
+
+.user-row h4{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #F7444E;
+    text-shadow: 2px 2px 20px #2121211f;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.user-row p{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.user-id{
+    min-width: 20%;
+    max-width: 20%;
+}
+
+.user-username{
+    min-width: 40%;
+    max-width: 40%;
+}
+
+.user-email{
+    min-width: 40%;
+    max-width: 40%;
+} */
+
+/* Edit Shoes Detail */
+/* 
+.edit-shoes-detail-img{
+    min-width: 40%;
+    max-width: 40%;
+    margin: auto 0;
+}
+
+.edit-shoes-detail-img img{
+    max-width: 100%;
+}
+
+.edit-shoes-detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border: 1px solid #f0f0f0;
+    padding: 3% 7%;
+}
+
+.edit-shoes-detail-body{
+    padding: auto auto;
+}
+
+.edit-shoes-detail-body form{
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    width: fit-content;
+    margin: auto auto;
+}
+
+.edit-shoes-detail-body .form-input .input{
+    width: 100%;
+}
+
+.edit-shoes-detail-body form button{
+    height: 35px;
+    border: 1px solid #F7444E;
+    background-color: #F7444E;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-top: 15px;
+}
+
+.edit-shoes-detail-body form button:hover{
+    background-color: #fc565e;
+    cursor: pointer;
+}
+
+.form-input-image{
+    margin-top: 15px;
+}
+
+.shoes-detail-body .edit-shoes-btn{
+    margin-left: 0;
+}
+
+.shoes-detail-body a{
+    width: fit-content;
+}
+
+.shoes-detail-body .edit-shoes-btn:hover{
+    color: #FFFFFF;
+    border-color: #F7444E;
+}
+
+.alert-msg{
+    font-family: 'Poppins', sans-serif;
+    width: fit-content;
+    color: crimson;
+    font-weight: 600;
+    margin: 20px auto;
+} */
+
+
+
+
+
+
+
+
+
